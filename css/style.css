@@ -1,0 +1,19 @@
+body {
+    height: 100vh;
+    background-color: orange;
+}
+
+
+li {
+    list-style: none;
+    background-color: azure;
+    border-radius: 30px;
+    width: 300px;
+    margin-right: 2rem;
+    margin-bottom: 1rem;
+    padding: 1rem 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}

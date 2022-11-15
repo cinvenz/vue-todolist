@@ -1,5 +1,5 @@
 new Vue({
-	el: '.root',
+	el: '#root',
 	data: {
         newTodo: '',
 		arrTodo: [
@@ -16,8 +16,8 @@ new Vue({
             this.arrTodo.push(this.newTodo);
             this.newTodo = '';
         },
-        deleteTodo(index) {
-            this.arrTodo.splice(index, 1)
+        deleteTodo(i) {
+            this.arrTodo.splice(i, 1)
         },
 	}
 });

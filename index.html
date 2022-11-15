@@ -32,15 +32,16 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+
+    <div id="root" class="container d-flex flex-column justify-content-center align-items-center">
     <h1>To Do List</h1>
 
-    <div class="root">
-        <form @submit.prevent="addTodo">
+        <form @submit.prevent="addTodo" class="mb-4 mt-2">
             <input type="text" placeholder="Inserisci todo" v-model="newTodo"/>
             <button>Aggiungi</button>
         </form>
 
-        <div>
+        <div class="container-todo">
             <h2 v-if="arrTodo.length == 0">Niente todo</h2>
 
             <ul V-else>
