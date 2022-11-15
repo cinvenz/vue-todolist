@@ -35,17 +35,17 @@
     <h1>To Do List</h1>
 
     <div class="root">
-        <div>
-            <input @keyup.enter="addTodo" type="text" placeholder="Inserisci todo" v-model="newTodo"/>
-            <button @click="addTodo">Aggiungi</button>
-        </div>
+        <form @submit.prevent="addTodo">
+            <input type="text" placeholder="Inserisci todo" v-model="newTodo"/>
+            <button>Aggiungi</button>
+        </form>
 
         <div>
-            <h2 v-if="arrTodo.lenght===0">Niente todo</h2>
+            <h2 v-if="arrTodo.length == 0">Niente todo</h2>
 
             <ul V-else>
                 <li v-for="(todo, i) in arrTodo" >
-                    {{todo.text}}
+                    {{todo}}
                     <i class="fa-solid fa-xmark" @click="deleteTodo(i)"></i>
 
                 </li>
