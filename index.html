@@ -45,8 +45,8 @@
             <h2 v-if="arrTodo.length == 0">Niente todo</h2>
 
             <ul V-else>
-                <li v-for="(todo, i) in arrTodo" >
-                    {{todo}}
+                <li v-for="(todo, i) in arrTodo" :class="todo.done ? '' : 'line'">
+                    {{todo.text}}
                     <i class="fa-solid fa-xmark" @click="deleteTodo(i)"></i>
 
                 </li>

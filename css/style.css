@@ -17,3 +17,7 @@ li {
     align-items: center;
     font-weight: bold;
 }
+
+.line {
+    text-decoration: line-through;
+}

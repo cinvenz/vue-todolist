@@ -3,21 +3,31 @@ new Vue({
 	data: {
         newTodo: '',
 		arrTodo: [
-		'Imparare Html',
-        'Imparare Css',
-        'Imparare Javascript'
+			{
+                text: 'Imparare Html',
+                done: true,
+              
+			},
+			{
+				text: 'Imparare Css',
+                done: false,
                 
-			
+			},
+			{
+				text: 'Imparare Javascript',
+                done: true,
+                
+			},
 		],
 	},
 	methods: {
         addTodo() {
-            this.newTodo.trim()
+            this.newTodo.trim();
             this.arrTodo.push(this.newTodo);
             this.newTodo = '';
         },
-        deleteTodo(i) {
-            this.arrTodo.splice(i, 1)
+        deleteTodo(index) {
+            this.arrTodo.splice(index, 1)
         },
 	}
 });
