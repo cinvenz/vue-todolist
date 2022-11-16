@@ -1,4 +1,4 @@
-new Vue({
+const app = new Vue({
 	el: '#root',
 	data: {
         newTodo: '',
@@ -23,12 +23,18 @@ new Vue({
 	methods: {
         addTodo() {
             this.newTodo.trim();
-            this.arrTodo.push(this.newTodo);
+            this.arrTodo.push({
+				text: this.newTodo,
+				done: true,
+			})
             this.newTodo = '';
         },
         deleteTodo(index) {
             this.arrTodo.splice(index, 1)
         },
+		changeDone (i) {
+			this.arrTodo[i].done = !this.arrTodo[i].done;
+		},
 	}
 });
 

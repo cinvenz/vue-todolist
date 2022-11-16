@@ -46,7 +46,7 @@
 
             <ul V-else>
                 <li v-for="(todo, i) in arrTodo" :class="todo.done ? '' : 'line'">
-                    {{todo.text}}
+                    <span @click="changeDone(i)">{{todo.text}}</span>
                     <i class="fa-solid fa-xmark" @click="deleteTodo(i)"></i>
 
                 </li>
