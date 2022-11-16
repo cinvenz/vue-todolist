@@ -22,12 +22,13 @@ const app = new Vue({
 	},
 	methods: {
         addTodo() {
-            this.newTodo.trim();
+           if(this.newTodo.trim() !== '') {
             this.arrTodo.push({
 				text: this.newTodo,
 				done: true,
 			})
             this.newTodo = '';
+		   }
         },
         deleteTodo(index) {
             this.arrTodo.splice(index, 1)
